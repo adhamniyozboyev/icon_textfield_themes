@@ -24,28 +24,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body:
-            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          func(Icons.home,),
-          func(Icons.house),
-          func(Icons.home_work),
-          func(Icons.house_sharp),
-          func(Icons.add_home_work),
-        ],
-      ),
-      Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          func(Icons.pool,Colors.blue),
-          func(Icons.water,Colors.blue),
-          func(Icons.water_sharp,Colors.blue),
-          func(Icons.pool_rounded,Colors.blue),
-          func(Icons.pool_sharp,Colors.blue),
-        ],
-      ),
-    ]));
+        body:TextField()
+    );
   }
 }
