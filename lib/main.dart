@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
     home: MyWidget(),
   ));
 }
@@ -14,6 +15,7 @@ class MyWidget extends StatefulWidget {
 }
 
 class _MyWidgetState extends State<MyWidget> {
+  TextEditingController controller = TextEditingController();
   bool b = false;
   @override
   Widget build(BuildContext context) {
@@ -22,12 +24,13 @@ class _MyWidgetState extends State<MyWidget> {
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           TextField(
+            controller: controller,
             keyboardType: TextInputType.name,
             decoration: InputDecoration(
                 hintText: 'Enter your name',
                 helperText: 'name',
-                prefix: Icon(Icons.people),
-                suffix: Icon(Icons.add_circle_outline_sharp),
+                prefixIcon: Icon(Icons.people),
+                suffixIcon: Icon(Icons.add_circle_outline_sharp),
                 border: OutlineInputBorder()),
           ),
           TextField(
@@ -36,7 +39,7 @@ class _MyWidgetState extends State<MyWidget> {
             decoration: InputDecoration(
                 hintText: 'Enter your code',
                 helperText: 'password',
-                prefix: Icon(Icons.password),
+                prefixIcon: Icon(Icons.power_settings_new_rounded),
                 suffixIcon: IconButton(
                     hoverColor: Colors.transparent,
                     highlightColor: Colors.transparent,
